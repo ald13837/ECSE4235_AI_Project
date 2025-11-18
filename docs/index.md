@@ -48,7 +48,7 @@ Since the system is headless, follow this specific sequence to ensure services l
 * **Stop:** Tap **"Stop"** to cut power immediately.
 
 ### 4. Automatic Control (Closed Loop)
-* Tap **"Switch to AUTO Mode"**.
+* Tap **"Automatic Mode"**.
 * Enter a target RPM (e.g., `1000`) in the text box.
 * Tap **"Send"**.
 * **Observation:**
