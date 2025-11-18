@@ -25,6 +25,38 @@ The system consists of a Raspberry Pi 4 that boots into a "headless" appliance m
 
 ---
 
+## 🎮 Usage Guide
+
+Since the system is headless, follow this specific sequence to ensure services load correctly.
+
+### 1. Power Up
+* Connect the USB-C power cable to the Raspberry Pi.
+* **Wait approximately 30-40 seconds.**
+    * *Why?* The boot scripts (`rc.local`) need time to load the Bluetooth stack, clear old security keys (`fix_bluetooth.sh`), and start the "Doorman" agent (`bt_agent.py`).
+
+### 2. Connect the App
+* Open the **PARMCO** app on your Android device.
+* Tap **"Scan for Devices"**.
+* Look for **`group-1`** (or your Pi's specific hostname) in the list.
+* Tap to connect.
+    * *Note:* The system will automatically handle pairing and service authorization. You should see a "Connected" toast message.
+
+### 3. Manual Control (Open Loop)
+* **Start:** Tap **"Start"** to initialize the motor at 30% power.
+* **Speed:** Use **"Faster"** and **"Slower"** to adjust the duty cycle by 10%.
+* **Direction:** Tap **"Toggle Direction"** to switch between Clockwise and Counter-Clockwise.
+* **Stop:** Tap **"Stop"** to cut power immediately.
+
+### 4. Automatic Control (Closed Loop)
+* Tap **"Switch to AUTO Mode"**.
+* Enter a target RPM (e.g., `1000`) in the text box.
+* Tap **"Send"**.
+* **Observation:**
+    * The motor will adjust power to reach the target.
+    * **The Finger Test:** If you apply light friction to the propeller, you will hear the motor power increase to fight the resistance and maintain the target RPM. This confirms the PID feedback loop is active.
+ 
+---
+
 ## 🛠 System Architecture
 
 ### 1. The Hardware (Raspberry Pi 4)
@@ -78,9 +110,9 @@ A native Android application built to interface with the headless unit.
 
 ## 📂 Source Code Links
 
-* [**C Server Code**](../Project_Completion/parmco_server.c)
-* [**Android App Code**](../Project_Completion/MainActivity.kt)
-* [**Boot Script**](../Project_Completion/rc.local)
+* [**C Server Code**](https://github.com/ald13837/ECSE4235_AI_Project/blob/main/Project_Completion/parmco_server.c)
+* [**Android App Code**](https://github.com/ald13837/ECSE4235_AI_Project/blob/main/Project_Completion/MainActivity.kt)
+* [**Boot Script**](https://github.com/ald13837/ECSE4235_AI_Project/blob/main/Project_Completion/rc.local)
 
 ---
 
