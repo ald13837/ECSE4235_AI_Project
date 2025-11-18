@@ -12,7 +12,8 @@ PARMCO is a full-stack embedded system designed to demonstrate **real-time feedb
 
 The system consists of a Raspberry Pi 4 that boots into a "headless" appliance mode (no monitor/keyboard required). It hosts a custom Bluetooth server written in C that communicates with a native Android app. The user can control a DC motor in Open-Loop (Manual) mode or switch to Closed-Loop (Automatic) mode, where a PID controller on the Pi maintains a specific RPM using IR sensor feedback.
 
-![Project Hardware Setup](images/hardware_setup.jpg)
+![Physical Setup](images/hardware.jpg)
+*(Replace this with a photo of your actual breadboard/motor setup)*
 
 ---
 
@@ -28,6 +29,10 @@ The system consists of a Raspberry Pi 4 that boots into a "headless" appliance m
 ## 🛠 System Architecture
 
 ### 1. The Hardware (Raspberry Pi 4)
+
+**Circuit Schematic:**
+![Motor Control Schematic](images/motor_control_circuit.svg)
+
 * **Motor Driver:** L293D H-Bridge controlling a 12V DC Motor.
 * **Feedback:** IR Obstacle Avoidance Sensor detecting propeller blade passes.
 * **Wiring:**
@@ -47,7 +52,7 @@ A native Android application built to interface with the headless unit.
 * **Interface:** Real-time dashboard showing Target vs. Actual RPM.
 * **Control:** Toggle switches for Auto/Manual modes and raw input for RPM targets.
 
-![Android App Screenshot](images/app_screenshot.jpg)
+![Android App Screenshot](images/app.JPG)
 *(Replace this image file in your docs/images folder)*
 
 ---
@@ -79,5 +84,5 @@ A native Android application built to interface with the headless unit.
 
 ---
 
-**Team Members:** [Your Name], [Partner's Name]
+**Team Members:** [Aubrey David], [Nevan Mukherjee]
 **Instructor:** Dr. Herring
