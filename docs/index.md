@@ -12,7 +12,7 @@ PARMCO is a full-stack embedded system designed to demonstrate **real-time feedb
 
 The system consists of a Raspberry Pi 4 that boots into a "headless" appliance mode (no monitor/keyboard required). It hosts a custom Bluetooth server written in C that communicates with a native Android app. The user can control a DC motor in Open-Loop (Manual) mode or switch to Closed-Loop (Automatic) mode, where a PID controller on the Pi maintains a specific RPM using IR sensor feedback.
 
-![Project Hardware Setup](images/motor_control_circuit.svg)
+![Project Hardware Setup](images/hardware_setup.jpg)
 
 ---
 
