@@ -51,7 +51,7 @@ A native Android application built to interface with the headless unit.
 * **Interface:** Real-time dashboard showing Target vs. Actual RPM.
 * **Control:** Toggle switches for Auto/Manual modes and raw input for RPM targets.
 
-![Android App Screenshot](images/app.JPG)
+<img src="images/app.JPG" alt="Android App Screenshot" width="300" />
 
 ---
 
