@@ -54,6 +54,8 @@ Since the system is headless, follow this specific sequence to ensure services l
 * **Observation:**
     * The motor will adjust power to reach the target.
     * **The Finger Test:** If you apply light friction to the propeller, you will hear the motor power increase to fight the resistance and maintain the target RPM. This confirms the PID feedback loop is active.
+
+### For best results, turn the power supply on only while using the app. Leaving it on for too long causes the motor to jitter.
  
 ---
 
